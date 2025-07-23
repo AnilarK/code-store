@@ -3,12 +3,13 @@
 class Solution {
 public:
     int findLucky(vector<int>& arr) {
-        vector<int>a(501,0);
+        int n=arr.size();
+        while(n<501){arr.push_back(0); n++;}
         for(int i=0;i<arr.size();i++){
-            a[arr[i]]++;
+            arr[arr[i]%1000]+=1000;
         }
-        for(int i=500;i>0;i--){
-            if(i==a[i]) return i;
+        for(int i=arr.size()-1;i>0;i--){
+            if(i==(arr[i])/1000) return i;
         }
         return -1;
     }
