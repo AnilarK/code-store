@@ -4,7 +4,7 @@ class Solution {
 public:
     int findLHS(vector<int>& a) {
         int n=a.size(),ans=0;
-        unordered_map<int,int>m;
+        map<int,int>m;
         for(int i=0;i<n;i++){m[a[i]]++;}
         for(auto it=m.begin();it!=m.end();it++){
             int p=it->first;
