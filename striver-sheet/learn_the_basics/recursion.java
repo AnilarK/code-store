@@ -18,7 +18,6 @@ class recursion {
         String name = sc.next();
 
         printN(name,n);
-
     }
 
 }
